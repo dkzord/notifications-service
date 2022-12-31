@@ -3,12 +3,12 @@ import { IsNotEmpty, IsUUID, Length } from 'class-validator';
 export class CreateNotificationBody {
   @IsNotEmpty()
   @Length(5, 240)
-  content: string | undefined;
+  content: string;
 
   @IsNotEmpty()
-  category: string | undefined;
+  category: string;
 
   @IsNotEmpty()
   @IsUUID()
-  recipientId: string | undefined;
+  recipientId: string;
 }
